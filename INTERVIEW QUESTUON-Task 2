@@ -1,0 +1,48 @@
+1. What is the purpose of EDA?
+EDA (Exploratory Data Analysis) helps you:
+Understand the structure, patterns, and relationships in your data
+Spot missing values, outliers, and data imbalances
+Make decisions on cleaning, transforming, or dropping features
+
+2. How do boxplots help in understanding a dataset?
+Boxplots show:
+Median (central tendency)
+Quartiles (spread)
+Outliers (extreme values)
+
+3. What is correlation and why is it useful?
+Correlation measures the strength and direction of a linear relationship between two variables (ranges from -1 to +1).
+I used a correlation matrix to identify:
+Positive correlation between Fare and Survived
+Negative correlation between Pclass and Survived This helped prioritize features for modeling.
+
+4. How do you detect skewness in data?
+Visually: using histograms or boxplots
+Statistically: using .skew() method in pandas
+In Titanic, Fare was heavily right-skewed, which made it important to consider for scaling or transformation before modeling.
+
+5. What is multicollinearity?
+Multicollinearity is when two or more independent features are highly correlated with each other. It can:
+Confuse models (especially linear regression)
+Inflate variance of coefficients
+You can detect it using:
+Correlation matrix
+Variance Inflation Factor (VIF)
+
+6. What tools do you use for EDA?
+Google Colab / Jupyter Notebook
+pandas, numpy → for data handling
+seaborn, matplotlib → for visualization
+scikit-learn → for preprocessing
+I used all of these in my Titanic EDA project.
+
+7. Can you explain a time when EDA helped you find a problem?
+Yes! In the Titanic dataset:
+EDA revealed that Fare had severe outliers
+Also found missing values in Embarked and Age Without EDA, I would have trained a model with noisy, incomplete data.
+
+8. What is the role of visualization in ML?
+Visualization helps you:
+Understand feature distributions
+Detect outliers, skewness, missing data
+Communicate findings clearly
